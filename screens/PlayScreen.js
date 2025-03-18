@@ -156,11 +156,18 @@ const PlayScreen = () => {
           </ScrollView>
         </View>
       </View>
-      <View>
+      <View
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          padding: 10,
+          backgroundColor: 'white',
+        }}>
         <Pressable>
           <Text style={{fontWeight: 'bold'}}>Create Game</Text>
         </Pressable>
-        <View>
+        <View style={{flexDirection: 'row', gap: 10, alignItems: 'center'}}>
           <Pressable>
             <Text style={{fontWeight: 'bold'}}>Filter</Text>
           </Pressable>
