@@ -5,13 +5,14 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
 
 import Ionicons from '@react-native-vector-icons/ionicons';
-import AntDesign from '@react-native-vector-icons/ant-design'
-import SimpleLineIcons from '@react-native-vector-icons/simple-line-icons'
+import AntDesign from '@react-native-vector-icons/ant-design';
+import SimpleLineIcons from '@react-native-vector-icons/simple-line-icons';
 
 import HomeScreen from '../screens/HomeScreen';
 import PlayScreen from '../screens/PlayScreen';
 import BookScreen from '../screens/BookScreen';
 import ProfileScreen from '../screens/ProfileScreen';
+import VenueInfoScreen from '../screens/VenueInfoScreen';
 
 const StackNavigator = () => {
   const Stack = createNativeStackNavigator();
@@ -80,10 +81,7 @@ const StackNavigator = () => {
   }
 
   const AuthStack = () => {
-    return (
-      <Stack.Navigator>
-      </Stack.Navigator>
-    );
+    return <Stack.Navigator></Stack.Navigator>;
   };
 
   function MainStack() {
@@ -92,6 +90,11 @@ const StackNavigator = () => {
         <Stack.Screen
           name="Main"
           component={BottomTabs}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Venue"
+          component={VenueInfoScreen}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
