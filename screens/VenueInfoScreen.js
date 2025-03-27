@@ -12,6 +12,7 @@ import {useRoute} from '@react-navigation/native';
 import Ionicons from '@react-native-vector-icons/ionicons';
 import FontAwesome from '@react-native-vector-icons/fontawesome';
 import MaterialCommunityIcons from '@react-native-vector-icons/material-design-icons';
+import Amenities from '../components/Amenities';
 
 const VenueInfoScreen = () => {
   const route = useRoute();
@@ -142,6 +143,7 @@ const VenueInfoScreen = () => {
               </View>
             ))}
           </ScrollView>
+          <Amenities />
         </>
       </ScrollView>
     </SafeAreaView>
