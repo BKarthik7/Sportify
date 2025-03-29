@@ -9,7 +9,7 @@ const Amenities = () => {
     },
     {
       id: '2',
-      name: 'free wifi',
+      name: 'Free Wifi',
     },
     {
       id: '3',

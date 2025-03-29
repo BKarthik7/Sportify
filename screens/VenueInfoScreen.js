@@ -143,7 +143,12 @@ const VenueInfoScreen = () => {
               </View>
             ))}
           </ScrollView>
+
           <Amenities />
+
+          <View style={{marginHorizontal: 10}}>
+            <Text style={{fontSize: 15, fontWeight: 'bold'}}>Activities</Text>
+          </View>
         </>
       </ScrollView>
     </SafeAreaView>
