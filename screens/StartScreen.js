@@ -158,33 +158,24 @@ const StartScreen = () => {
             const user = users[index % users.length];
             return (
               <Marker key={index} coordinate={point}>
-                <View style={{justifyContent: 'center', alignItems: 'center'}}>
+                <View
+                  style={{
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    width: 33,
+                    height: 33,
+                    backgroundColor: 'yellow',
+                    borderRadius: 20,
+                  }}>
                   <Image
                     source={{uri: user.image}}
                     style={{
-                      width: 70,
-                      height: 70,
+                      width: 30,
+                      height: 30,
                       resizeMode: 'cover',
-                      borderRadius: 35,
+                      borderRadius: 15,
                     }}
                   />
-                </View>
-
-                <View
-                  style={{
-                    paddingHorizontal: 10,
-                    paddingVertical: 7,
-                    borderRadius: 7,
-                    backgroundColor: 'white',
-                  }}>
-                  <Text
-                    style={{
-                      textAlign: 'center',
-                      fontSize: 13,
-                      fontWeight: '500',
-                    }}>
-                    {user?.description}
-                  </Text>
                 </View>
               </Marker>
             );
