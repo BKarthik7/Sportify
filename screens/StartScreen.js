@@ -214,7 +214,7 @@ const StartScreen = () => {
 
         <Pressable
           style={{
-            marginTop: 40,
+            marginTop: 25,
             justifyContent: 'center',
             alignItems: 'center',
           }}
