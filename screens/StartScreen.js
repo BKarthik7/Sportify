@@ -149,10 +149,10 @@ const StartScreen = () => {
           ref={mapView}
           style={{width: '100%', height: 400}}
           initialRegion={{
-            latitude: 37.78825,
-            longitude: -122.4324,
-            latitudeDelta: 0.0922,
-            longitudeDelta: 0.0421,
+            latitude: BANGALORE_COORDS.latitude,
+            longitude: BANGALORE_COORDS.longitude,
+            latitudeDelta: 0.2,
+            longitudeDelta: 0.1,
           }}>
           {circularPoints.map((point, index) => {
             const user = users[index % users.length];
