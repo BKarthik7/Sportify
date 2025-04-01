@@ -23,8 +23,8 @@ const StartScreen = () => {
     },
   ]);
   const BANGALORE_COORDS = {
-    latitude: 12.9916987,
-    longitude: 77.5945627,
+    latitude: 12.967,
+    longitude: 77.594,
   };
   const navigation = useNavigation();
 
