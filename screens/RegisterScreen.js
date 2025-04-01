@@ -45,7 +45,7 @@ const RegisterScreen = () => {
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text
               style={{textAlign: 'center', fontWeight: '500', fontSize: 15}}>
-              I agree to recieve updates over Whatsapp
+              I agree to recieve updates over Whatsapp.
             </Text>
             <Text
               style={{
@@ -55,7 +55,7 @@ const RegisterScreen = () => {
                 marginTop: 20,
               }}>
               By Signing up, you agree to the terms of service and privacy
-              policy
+              policy.
             </Text>
           </View>
         </View>
