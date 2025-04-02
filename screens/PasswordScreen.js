@@ -13,10 +13,15 @@ import FontAwesome from '@react-native-vector-icons/fontawesome';
 import MaterialCommunityIcons from '@react-native-vector-icons/material-design-icons';
 import {useNavigation} from '@react-navigation/native';
 
+import {saveRegistrationProgress} from '../registrationUtils';
+
 const PasswordScreen = () => {
   const [password, setPassword] = useState('');
   const navigation = useNavigation();
   const handleNext = () => {
+    if (password.trim() !== '') {
+      saveRegistrationProgress('Password', {password});
+    }
     navigation.navigate('Name');
   };
   return (

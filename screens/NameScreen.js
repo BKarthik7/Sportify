@@ -6,10 +6,15 @@ import {
   TextInput,
   Pressable,
 } from 'react-native';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
 
 import Ionicons from '@react-native-vector-icons/ionicons';
+
+import {
+  getRegistrationProgress,
+  saveRegistrationProgress,
+} from '../registrationUtils';
 
 const NameScreen = () => {
   const [firstName, setFirstName] = useState('');
@@ -17,8 +22,20 @@ const NameScreen = () => {
   const navigation = useNavigation();
 
   const saveName = () => {
+    if (firstName.trim() !== '') {
+      saveRegistrationProgress('Name', {firstName, lastName});
+    }
     navigation.navigate('Image');
   };
+
+  useEffect(() => {
+    getRegistrationProgress('Name').then(progressData => {
+      if (progressData) {
+        setFirstName(progressData.firstName || '');
+        setLastName(progressData.lastName || '');
+      }
+    });
+  }, []);
 
   return (
     <>
