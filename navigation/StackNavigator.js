@@ -1,5 +1,5 @@
 import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import React, {useContext} from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
@@ -23,9 +23,13 @@ import NameScreen from '../screens/NameScreen';
 import SelectImage from '../screens/SelectImage';
 import PreFinalScreen from '../screens/PreFinalScreen';
 
+import {AuthContext} from '../AuthContext';
+
 const StackNavigator = () => {
   const Stack = createNativeStackNavigator();
   const Tab = createBottomTabNavigator();
+
+  const {token} = useContext(AuthContext);
 
   function BottomTabs() {
     return (
@@ -155,7 +159,7 @@ const StackNavigator = () => {
 
   return (
     <NavigationContainer>
-      <AuthStack />
+      {token === null || token === '' ? <AuthStack /> : <MainStack />}
     </NavigationContainer>
   );
 };

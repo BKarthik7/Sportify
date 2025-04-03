@@ -7,10 +7,14 @@ import {
   Pressable,
   TextInput,
 } from 'react-native';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import Ionicons from '@react-native-vector-icons/ionicons';
 import {useNavigation} from '@react-navigation/native';
+import {
+  getRegistrationProgress,
+  saveRegistrationProgress,
+} from '../registrationUtils';
 
 const SelectImage = () => {
   const navigation = useNavigation();
@@ -34,7 +38,18 @@ const SelectImage = () => {
   ];
   const [image, setImage] = useState(images[0].image);
 
+  useEffect(() => {
+    getRegistrationProgress('Image').then(progressData => {
+      if (progressData) {
+        setImage(progressData.image || '');
+      }
+    });
+  }, []);
+
   const saveImage = () => {
+    if (image.trim() !== '') {
+      saveRegistrationProgress('Image', {image});
+    }
     navigation.navigate('PreFinal');
   };
 
