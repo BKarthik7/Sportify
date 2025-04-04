@@ -13,6 +13,7 @@ import PlayScreen from '../screens/PlayScreen';
 import BookScreen from '../screens/BookScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import VenueInfoScreen from '../screens/VenueInfoScreen';
+import CreateActivity from '../screens/CreateActivity';
 
 import StartScreen from '../screens/StartScreen';
 import LoginScreen from '../screens/LoginScreen';
@@ -151,6 +152,11 @@ const StackNavigator = () => {
         <Stack.Screen
           name="Venue"
           component={VenueInfoScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="CreateGame"
+          component={CreateActivity}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

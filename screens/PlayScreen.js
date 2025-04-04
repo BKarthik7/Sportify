@@ -10,11 +10,13 @@ import {
 import React, {useState} from 'react';
 import MaterialIcons from '@react-native-vector-icons/material-icons';
 import Ionicons from '@react-native-vector-icons/ionicons';
-import {set} from 'mongoose';
+import {useNavigation} from '@react-navigation/native';
 
 const PlayScreen = () => {
   const [option, setOption] = useState('My Sports');
   const [sport, setSport] = useState('Badminton');
+  const navigation = useNavigation();
+
   return (
     <SafeAreaView>
       <View style={{padding: 12, backgroundColor: '#223536'}}>
@@ -164,7 +166,7 @@ const PlayScreen = () => {
           padding: 10,
           backgroundColor: 'white',
         }}>
-        <Pressable>
+        <Pressable onPress={() => navigation.navigate('CreateGame')}>
           <Text style={{fontWeight: 'bold'}}>Create Game</Text>
         </Pressable>
         <View style={{flexDirection: 'row', gap: 10, alignItems: 'center'}}>
