@@ -8,6 +8,7 @@ import {
   TextInput,
 } from 'react-native';
 import React, {useState} from 'react';
+import {useNavigation} from '@react-navigation/native';
 
 import Ionicons from '@react-native-vector-icons/ionicons';
 import MaterialCommunityIcons from '@react-native-vector-icons/material-design-icons';
@@ -24,6 +25,9 @@ const CreateActivity = () => {
   const [timeInterval, setTimeInterval] = useState('');
   const [noOfPlayers, setNoOfPlayers] = useState(0);
   const [selected, setSelected] = useState('Public');
+
+  const navigation = useNavigation();
+
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
       <ScrollView>
@@ -61,6 +65,7 @@ const CreateActivity = () => {
           </Pressable>
           <Text style={{borderColor: '#E0E0E0', borderWidth: 1, height: 1}} />
           <Pressable
+            onPress={() => navigation.navigate('TagVenue')}
             style={{
               flexDirection: 'row',
               alignItems: 'center',
