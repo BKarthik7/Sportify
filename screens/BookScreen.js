@@ -92,7 +92,6 @@ const BookScreen = () => {
         data={venues}
         renderItem={({item}) => <VenueCard item={item} />}
         contentContainerStyle={{paddingBottom: 20}}
-        // showsVerticalScrollIndicator={false}
       />
     </SafeAreaView>
   );

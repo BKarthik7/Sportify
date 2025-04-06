@@ -99,17 +99,14 @@ const CreateActivity = () => {
         setDate('');
         setTimeInterval('');
       }
-      // Handle success or navigate to another screen
     } catch (error) {
       console.error('Failed to create game:', error);
-      // Handle error
     }
   };
 
   const dates = generateDates();
 
   useEffect(() => {
-    console.log('I run');
     if (route.params?.taggedVenue) {
       setTaggedVenue(route.params.taggedVenue);
     }
@@ -210,6 +207,7 @@ const CreateActivity = () => {
             </Pressable>
             <Text style={{borderColor: '#E0E0E0', borderWidth: 1, height: 1}} />
             <Pressable
+              onPress={() => navigation.navigate('Time')}
               style={{
                 flexDirection: 'row',
                 alignItems: 'center',

@@ -15,6 +15,7 @@ import ProfileScreen from '../screens/ProfileScreen';
 import VenueInfoScreen from '../screens/VenueInfoScreen';
 import CreateActivity from '../screens/CreateActivity';
 import TagVenueScreen from '../screens/TagVenueScreen';
+import SelectTimeScreen from '../screens/SelectTimeScreen';
 
 import StartScreen from '../screens/StartScreen';
 import LoginScreen from '../screens/LoginScreen';
@@ -163,6 +164,11 @@ const StackNavigator = () => {
         <Stack.Screen
           name="TagVenue"
           component={TagVenueScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Time"
+          component={SelectTimeScreen}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

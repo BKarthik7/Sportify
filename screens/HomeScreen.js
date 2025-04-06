@@ -211,10 +211,6 @@ const HomeScreen = () => {
               padding: 12,
               width: 180,
               borderRadius: 10,
-              // position: "absolute",
-              // top: 100,
-              // left: "20%",
-              // transform: [{ translateX: -100 }],
             }}>
             <View>
               <Text style={{fontSize: 15, fontWeight: '500'}}>Play</Text>

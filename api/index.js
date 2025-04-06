@@ -577,18 +577,15 @@ const venues = [
     address: '1st Cross, RMV 2nd Stage, Nagashettihalli bangalore',
     bookings: [],
   },
-  // Add more venues as need
 ];
 
 async function addVenues() {
   for (const venueData of venues) {
-    // Check if the venue already exists
     const existingVenue = await Venue.findOne({name: venueData.name});
 
     if (existingVenue) {
       console.log(`Venue "${venueData.name}" already exists. Skipping.`);
     } else {
-      // Add the new venue
       const newVenue = new Venue(venueData);
       await newVenue.save();
       console.log(`Venue "${venueData.name}" added successfully.`);
