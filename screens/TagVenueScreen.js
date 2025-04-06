@@ -30,8 +30,6 @@ const TagVenueScreen = () => {
     fetchVenues();
   }, []);
 
-  console.log('venues', venues);
-
   const [taggedVenue, setTaggedVenue] = useState(null);
 
   useEffect(() => {
@@ -49,15 +47,15 @@ const TagVenueScreen = () => {
     <SafeAreaView>
       <View
         style={{
-          padding: 10,
+          padding: 16,
           backgroundColor: '#294461',
-          paddingBottom: 20,
         }}>
         <View
           style={{
             flexDirection: 'row',
             alignItems: 'center',
             gap: 10,
+            marginRight: 1,
           }}>
           <Ionicons name="arrow-back" size={24} color="white" />
 
@@ -107,7 +105,7 @@ const TagVenueScreen = () => {
                   </Text>
 
                   <Text style={{marginTop: 8, fontWeight: '500'}}>
-                    4.4 (122 ratings)
+                    {item.rating} ({item.ratingCount} ratings)
                   </Text>
                 </View>
 

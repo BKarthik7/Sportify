@@ -92,12 +92,12 @@ app.post('/login', async (req, res) => {
 const venues = [
   {
     name: '147 One Four Seven Snooker, Billiards and Pool Sports Academy',
-    rating: 4,
+    rating: 4.1,
     deferLink: 'https://playo.page.link/ry8TT',
     fullLink:
       'https://playo.co/venue/?venueId=4ec5b58f-d58f-4ce1-8c84-2caa63007ecc',
-    avgRating: 4,
-    ratingCount: 3,
+    avgRating: 4.1,
+    ratingCount: 120,
     lat: 12.9341796,
     lng: 77.6101537,
     icon: 'https://maps.google.com/mapfiles/kml/paddle/4-lv.png',
@@ -173,12 +173,12 @@ const venues = [
   },
   {
     name: 'OvalNet Badminton Academy - Sahakar Nagar',
-    rating: 4,
+    rating: 4.2,
     deferLink: 'https://z34v4.app.goo.gl/MAAX',
     fullLink:
       'https://playo.co/venue/?venueId=afbe7186-2f86-4215-8715-4b967f166b09',
-    avgRating: 4,
-    ratingCount: 3,
+    avgRating: 4.2,
+    ratingCount: 95,
     lat: 13.059883,
     lng: 77.582389,
     icon: 'https://maps.google.com/mapfiles/kml/paddle/4-lv.png',
@@ -254,12 +254,12 @@ const venues = [
   },
   {
     name: 'OvalNet Badminton Academy - Sahakar Nagar',
-    rating: 4,
+    rating: 4.3,
     deferLink: 'https://z34v4.app.goo.gl/MAAX',
     fullLink:
       'https://playo.co/venue/?venueId=afbe7186-2f86-4215-8715-4b967f166b09',
-    avgRating: 4,
-    ratingCount: 3,
+    avgRating: 4.3,
+    ratingCount: 110,
     lat: 13.059883,
     lng: 77.582389,
     icon: 'https://maps.google.com/mapfiles/kml/paddle/4-lv.png',
@@ -335,12 +335,12 @@ const venues = [
   },
   {
     name: 'Play Zone - Sahakarnagar (Shree Vayu Badminton Arena)',
-    rating: 4,
+    rating: 4.5,
     fullLink:
       'https://playo.co/venue?venueId=6bb450c0-318b-49e5-b7c0-c02a37d34ef8',
     deferLink: 'https://z34v4.app.goo.gl/4Kqo',
-    avgRating: 4,
-    ratingCount: 3,
+    avgRating: 4.5,
+    ratingCount: 150,
     lat: 13.053750730700056,
     lng: 77.57626923775621,
     icon: 'https://maps.google.com/mapfiles/kml/paddle/4-lv.png',
@@ -417,12 +417,12 @@ const venues = [
   },
   {
     name: 'VIN Badminton',
-    rating: 4,
+    rating: 4.6,
     deferLink: 'https://z34v4.app.goo.gl/RTF4',
     fullLink:
       'https://playo.co/venue/?venueId=37f3675b-dfd2-4f30-8506-a3883abef902',
-    avgRating: 4,
-    ratingCount: 3,
+    avgRating: 4.6,
+    ratingCount: 200,
     lat: 13.071497063988476,
     lng: 77.58706385591489,
     icon: 'https://maps.google.com/mapfiles/kml/paddle/4-lv.png',
@@ -498,12 +498,12 @@ const venues = [
   },
   {
     name: 'Serve & Smash Badminton Academy',
-    rating: 4,
+    rating: 4.7,
     fullLink:
       'https://playo.co/venue?venueId=a0c6ceb4-d09b-4fcf-bafd-6c949a55590c',
     deferLink: 'https://z34v4.app.goo.gl/3k9a',
-    avgRating: 4,
-    ratingCount: 3,
+    avgRating: 4.7,
+    ratingCount: 250,
     lat: 13.045735,
     lng: 77.572929,
     icon: 'https://maps.google.com/mapfiles/kml/paddle/4-lv.png',
